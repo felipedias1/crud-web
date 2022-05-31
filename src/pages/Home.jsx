@@ -7,13 +7,13 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const [search, setSearch] = useState("");
-  const { allCustomers, setAllCustomers, edit, setEdit } = useContext(DataContext);
+  const { allCustomers, setAllCustomers, setEdit, erase } = useContext(DataContext);
   const navigate = useNavigate();
   
   // Buscar todos os clientes
   useEffect(() => {
     getCustomers().then((response) => setAllCustomers(response))
-  }, [allCustomers]);
+  }, [erase]);
 
   const resgister = () => {
     setEdit({})
@@ -21,24 +21,29 @@ function Home() {
   }
 
   return (
-    <div>
-      <button
-        type="button"
-        data-testid="button-create-customer"
-        onClick={ resgister }
-      >
-        Cadastrar
-      </button>
-      <label className='search'>
-        Pesquisar 
-        <input 
-          type="text" 
-          name="search" 
-          value={ search } 
-          onChange={ ({ target }) => setSearch(target.value) } 
-        />
-      </label>
-      <Table search={search}/>
+    <div className="home-page">
+      <div className="search-bar-register">
+        <button
+          type="button"
+          data-testid="button-create-customer"
+          onClick={ resgister }
+        >
+          Cadastrar
+        </button>
+        <label className='search'>
+          Pesquisar 
+          {console.log(allCustomers)}
+          <input 
+            type="text" 
+            name="search" 
+            value={ search } 
+            onChange={ ({ target }) => setSearch(target.value) } 
+          />
+        </label>
+      </div>
+      <div className="customer-table">
+        <Table search={search}/>
+      </div>
     </div>
   );
 }
