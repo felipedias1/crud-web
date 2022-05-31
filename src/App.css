@@ -3,6 +3,11 @@ body {
   padding: 0;
 }
 
+.header{
+  background-color: #2873b6;
+  color: white;
+}
+
 .search-bar-register {
   display: flex;
   align-content: space-around;
