@@ -66,145 +66,170 @@ function FormPJ() {
   } 
 
   return (
-    <form>
-      <label className='razao-social'>
-        Razão Social 
-        <input 
-          type="text" 
-          name="razao-social" 
-          value={ razao_social } 
-          onChange={ ({ target }) => setRazaoSocial(target.value) } 
-        />
-      </label>
-      <label className='nome-fantasia'>
-        Nome Fantasia
-        <input 
-          type="text" 
-          name="nome-fantasia" 
-          value={ nome_fantasia } 
-          onChange={ ({ target }) => setNomeFantasia(target.value) } 
-        />
-      </label>
-      <label className='status'>
-        <input 
-          type="checkbox" 
-          name="status" required
-          checked= {status}
-          onChange={ () => status ? setSatus(false) : setSatus(true)}
-        />
-        Ativo
-      </label>
-      <label className='cnpj'>
-        CNPJ
-        <input 
-          type="text" 
-          name="cnpj" value={ cnpj } 
-          onChange={ ({ target }) => setCnpj(target.value) } 
-        />
-      </label>
-      <div onChange={({ target }) => setContribuinte(target.value) }>
-        <label className='contribuinte'> Contribuinte </label>
-        <input 
-          type="radio" 
-          value="Sim" 
-          name="gender"
-        /> Sim
-        <input 
-          type="radio" 
-          value="Não" 
-          name="gender" 
-          defaultChecked={true}
-        /> Não
+    <form className="form">
+      <div className="form-pj-part1">
+        <label className='razao-social'>
+          Razão Social 
+          <input 
+            type="text" 
+            name="razao-social" 
+            value={ razao_social } 
+            onChange={ ({ target }) => setRazaoSocial(target.value) } 
+          />
+        </label>
+        <label className='nome-fantasia'>
+          Nome Fantasia
+          <input 
+            type="text" 
+            name="nome-fantasia" 
+            value={ nome_fantasia } 
+            onChange={ ({ target }) => setNomeFantasia(target.value) } 
+          />
+        </label>
+        <label className='status'>
+          <input 
+            type="checkbox" 
+            name="status" required
+            checked= {status}
+            onChange={ () => status ? setSatus(false) : setSatus(true)}
+          />
+          Ativo
+        </label>
       </div>
-      <label className='inscricao-estadual'>
-        Insc. Estadual
-        <input 
-          type="text" 
-          name="inscricao-estadual" 
-          value={ inscricao_estadual } 
-          onChange={ ({ target }) => setInscEst(target.value) } 
-        />
-      </label>
-      <label className='inscricao-municipal'>
-        Insc. Municipal
-        <input 
-          type="text" 
-          name="inscricao-municipal" 
-          value={inscricao_municipal } 
-          onChange={({ target }) => setInscMun(target.value) } 
-        />
-      </label>
-      <label className='email'>
-        Email
-        <input 
-          type="text" 
-          name="email" 
-          value={ email } 
-          onChange={({ target }) => setEmail(target.value) } 
-        />
-      </label>
-      <label className='nome'>
-        Nome do Responsável
-        <input 
-          type="text" 
-          name="nome" 
-          value={ nome } 
-          onChange={({ target }) => setNome(target.value) } 
-        />
-      </label>
-      <label className='cpf'>
-        CPF
-        <input 
-          type="text" 
-          name="cpf" 
-          value={ cpf } 
-          onChange={({ target }) => setCpf(target.value) } 
-        />
-      </label>
-      <label className='data-nascimento'>
-        Data. Nasc. Resp
-        <input 
-          type="text" 
-          name="data-nascimento" 
-          value={ data_nascimento } 
-          onChange={({ target }) => setDataNascimento(target.value) } 
-        />
-      </label>
-      <label className='telefone'>
-        Telefone
-        <input 
-          type="text" 
-          name="telefone" 
-          value={ telefone } 
-          onChange={({ target }) => setTelefone(target.value) } 
-        />
-      </label>
-      <label className='celular'>
-        Celular
-        <input 
-          type="text" 
-          name="celular" 
-          value={ celular } 
-          onChange={({ target }) => setCelular(target.value) } 
-        />
-      </label>
-      <label className='email_responsavel'>
-        Email
-        <input 
-          type="text" 
-          name="email_responsavel" 
-          value={ email_responsavel } 
-          onChange={({ target }) => setEmailResp(target.value) } 
-        />
-      </label>
+      <div className="form-pj-part2">
+        <label className='cnpj'>
+          CNPJ
+          <input 
+            type="text" 
+            name="cnpj" value={ cnpj } 
+            onChange={ ({ target }) => setCnpj(target.value) } 
+          />
+        </label>
+        <div onChange={({ target }) => setContribuinte(target.value) }>
+          <label className='contribuinte'> Contribuinte </label>
+          <input 
+            type="radio" 
+            value="Sim" 
+            name="gender"
+          /> Sim
+          <input 
+            type="radio" 
+            value="Não" 
+            name="gender" 
+            defaultChecked={true}
+          /> Não
+        </div>
+      </div>
+      <div className="form-pj-part3">
+        <label className='inscricao-estadual'>
+          Insc. Estadual
+          <input 
+            type="text" 
+            name="inscricao-estadual" 
+            value={ inscricao_estadual } 
+            onChange={ ({ target }) => setInscEst(target.value) } 
+          />
+        </label>
+        <label className='inscricao-municipal'>
+          Insc. Municipal
+          <input 
+            type="text" 
+            name="inscricao-municipal" 
+            value={inscricao_municipal } 
+            onChange={({ target }) => setInscMun(target.value) } 
+          />
+        </label>
+      </div>
+      <div className="form-pj-part4">
+        <label className='email'>
+          Email
+          <input 
+            type="text" 
+            name="email" 
+            value={ email } 
+            onChange={({ target }) => setEmail(target.value) } 
+          />
+        </label>
+      </div>
+      <div className="form-pj-part5">
+        <label className='nome'>
+          Nome do Responsável
+          <input 
+            type="text" 
+            name="nome" 
+            value={ nome } 
+            onChange={({ target }) => setNome(target.value) } 
+          />
+        </label>
+      </div>
+      <div className="form-pj-part6">
+        <label className='cpf'>
+          CPF
+          <input 
+            type="text" 
+            name="cpf" 
+            value={ cpf } 
+            onChange={({ target }) => setCpf(target.value) } 
+          />
+        </label>
+        <label className='data-nascimento'>
+          Data. Nasc. Resp
+          <input 
+            type="date" 
+            name="data-nascimento" 
+            value={ data_nascimento } 
+            onChange={({ target }) => setDataNascimento(target.value) } 
+          />
+        </label>
+      </div>
+      <div className="form-pj-part7">
+        <label className='telefone'>
+          Telefone
+          <input 
+            type="tel" 
+            name="telefone" 
+            value={ telefone } 
+            onChange={({ target }) => setTelefone(target.value) } 
+          />
+        </label>
+        <label className='celular'>
+          Celular
+          <input 
+            type="number" 
+            name="celular" 
+            value={ celular } 
+            onChange={({ target }) => setCelular(target.value) } 
+          />
+        </label>
+        <label className='email_responsavel'>
+          Email
+          <input 
+            type="email"
+            name="email_responsavel" 
+            value={ email_responsavel } 
+            onChange={({ target }) => setEmailResp(target.value) } 
+          />
+        </label>
+      </div>
       <Endereco />
-      <button
-        type="button"
-        data-testid="button-create-customer"
-        onClick={ sendCustomerPayload }
-      >
-        Enviar
-      </button>
+      <div className="buttons">
+        <button
+          id="Enviar"
+          type="submit"
+          data-testid="button-create-customer"
+          onClick={ sendCustomerPayload }
+        >
+          Enviar
+        </button>
+        <button
+          id="Cancelar"
+          type="button"
+          data-testid="button-create-customer"
+          onClick={ () => navigate('/') }
+        >
+          Cancelar
+        </button>
+      </div>
     </form>
   );
 }
