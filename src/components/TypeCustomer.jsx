@@ -6,7 +6,7 @@ function TypeCustomer(props) {
   const { edit } = useContext(DataContext);
 
   return (
-    <div onChange={ ({ target }) => setType(target.value) }>
+    <div className="tipo" onChange={ ({ target }) => setType(target.value) }>
       <label className='tipo'> Tipo </label>
       <input 
         disabled={edit["id"] && true}
