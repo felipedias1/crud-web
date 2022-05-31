@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import { deleteCustomer, getCustomersById } from "../api/index"
 import DataContext from '../context/DataContext';
+import Edit from "../images/edit.png"
+import Delete from "../images/delete.png"
 
 function Table(props) {
 
-  const { columns, allCustomers, setEdit } = useContext(DataContext);
+  const { columns, allCustomers, setEdit, erase, setErase } = useContext(DataContext);
   const { search } = props;
   const navigate = useNavigate();
  
@@ -18,10 +20,11 @@ function Table(props) {
 
   const customerDelete = async (id) => {
     await deleteCustomer(id)
+    erase? setErase(false) : setErase(true)
   }
 
   return (
-    allCustomers.length !== 0? 
+    allCustomers && 
     (<table>
       <thead>
         <tr>
@@ -44,21 +47,19 @@ function Table(props) {
                 type="button"
                 onClick={ () => editCustomer(customer["id"])} 
                 >
-                  Editar
+                  <img src={Edit} alt="edit" height ="20" width="20" />
                 </button>
-              </td>
-              <td>
                 <button
                  type="button"
                  onClick={ () => customerDelete(customer["id"]) } 
                 >
-                  Apagar
+                  <img src={Delete} alt="delete" height ="20" width="20" />
                 </button>
               </td>
             </tr>)
         )}
       </tbody>
-    </table>) : "Loading"
+    </table>)
   );
 }
 
