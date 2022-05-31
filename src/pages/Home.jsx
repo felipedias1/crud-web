@@ -22,6 +22,7 @@ function Home() {
 
   return (
     <div className="home-page">
+      <h1 className="header">Home</h1>
       <div className="search-bar-register">
         <button
           type="button"

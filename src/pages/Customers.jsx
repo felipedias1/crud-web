@@ -12,6 +12,7 @@ function Customers() {
 
   return (
     <div>
+      <h1 className="header">Cliente</h1>
       <h2>{edit["id"]? "Editar Cliente" : "Adicionar Novo Cliente" }</h2>
       <TypeCustomer type={type} setType={setType} />
       { type === "F"? <FormPF /> : <FormPJ /> }
