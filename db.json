@@ -291,6 +291,36 @@
         "observacao": ""
       },
       "id": 20
+    },
+    {
+      "tipo_pessoa": "J",
+      "nome_razao_social": "dadasd",
+      "nome_fantasia": "Felipe Ferreira Dias",
+      "status": true,
+      "cnpj_cpf": "DASDASDASDA",
+      "contribuinte": "Não",
+      "inscricao_estadual": "",
+      "inscricao_municipal": "",
+      "email": "fsfsf",
+      "responsavel": {
+        "nome": "fsdf",
+        "cpf": "sfsf",
+        "data_nascimento": "2022-05-03",
+        "telefone": "sdfdsfsd",
+        "celular": "",
+        "email_responsavel": ""
+      },
+      "endereco": {
+        "cep": "",
+        "cidade": "",
+        "uf": "",
+        "endereco": "fsdfdsfs",
+        "numero": "",
+        "complemento": "",
+        "bairro": "fsfdsfsd",
+        "observacao": ""
+      },
+      "id": 21
     }
   ]
 }
