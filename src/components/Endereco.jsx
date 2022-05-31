@@ -23,37 +23,51 @@ function Form() {
   }, [cep, cidade, uf, endereco, numero, complemento, bairro, observacao]);
 
   return (
-    <div>
-      <label className='cep'>
-        CEP
-        <input type="text" name="cep" value={ cep } onChange={ (e) => setCep(e.target.value) } />
-      </label>
-      <label className='cep'>
-        Cidade
-        <input type="text" name="cidade" value={ cidade } onChange={ (e) => setCidade(e.target.value) } />
-      </label>
-      <SelectUf uf={uf} setUf={setUf}/>
-      <label className='endereco'>
-        Endereço
-        <input type="text" name="endereco" value={ endereco } onChange={ (e) => setEndereco(e.target.value) } />
-      </label>
-      <label className='numero'>
-        Numero
-        <input type="text" name="numero" value={ numero } onChange={ (e) => setNumero(e.target.value) } />
-      </label>
-      <label className='complemento'>
-        Complemento
-        <input type="text" name="complemento" value={ complemento } onChange={ (e) => setComplemento(e.target.value) } />
-      </label>
-      <label className='bairro'>
-        Bairro
-        <input type="text" name="bairro" value={ bairro } onChange={ (e) => setBairro(e.target.value) } />
-      </label>
-      <label className='observacao'>
-        Observacao
-        <input type="text" name="observacao" value={ observacao } onChange={ (e) => setObservacao(e.target.value) } />
-      </label>
-    </div>
+    <form>
+      <div className="form-end-part1">
+        <label className='cep'>
+          CEP
+          <input 
+            type="text" 
+            name="cep" 
+            value={ cep } 
+            onChange={ (e) => setCep(e.target.value) }
+            required 
+          />
+        </label>
+        <label className='cep'>
+          Cidade
+          <input type="text" name="cidade" value={ cidade } onChange={ (e) => setCidade(e.target.value) } />
+        </label>
+        <SelectUf uf={uf} setUf={setUf}/>
+      </div>
+      <div className="form-end-part2">
+        <label className='endereco'>
+          Endereço
+          <input type="text" name="endereco" value={ endereco } onChange={ (e) => setEndereco(e.target.value) } />
+        </label>
+        <label className='numero'>
+          Numero
+          <input type="text" name="numero" value={ numero } onChange={ (e) => setNumero(e.target.value) } />
+        </label>
+      </div>
+      <div className="form-end-part3">
+        <label className='complemento'>
+          Complemento
+          <input type="text" name="complemento" value={ complemento } onChange={ (e) => setComplemento(e.target.value) } />
+        </label>
+        <label className='bairro'>
+          Bairro
+          <input type="text" name="bairro" value={ bairro } onChange={ (e) => setBairro(e.target.value) } />
+        </label>
+      </div>
+      <div className="form-end-part4">
+        <label className='observacao'>
+          Observacao
+          <textarea type="textarea" name="observacao" value={ observacao } onChange={ (e) => setObservacao(e.target.value) } />
+        </label>
+      </div>
+    </form>
   );
 }
 
