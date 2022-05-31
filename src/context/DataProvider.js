@@ -7,13 +7,14 @@ function DataProvider({ children }) {
   const [address, setAddress] = useState({});
   const [allCustomers, setAllCustomers] = useState([]);
   const [edit, setEdit] = useState({});
+  const [erase, setErase] = useState("erase");
   const [columns, setColumns] = useState([
     "ID",
     "Nome/Razão Social",
     "CPF/CNPJ",
     "Email",
     "Tel",
-    "cel",
+    "Cel",
   ]);
 
   const contextValue = {
@@ -25,6 +26,8 @@ function DataProvider({ children }) {
     setColumns,
     edit,
     setEdit,
+    erase,
+    setErase,
   };
 
   return (
