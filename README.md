@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Projeto Cadastro de Clientes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Boas vindas ao Cadastro de Clientes
 
-## Available Scripts
+## Contexto
 
-In the project directory, you can run:
+O projeto foi uma proposta de desafio técnico para desenvolver uma aplicação que ajudasse a empresa a criar uma tela para cadastro e outra para gerenciamento de clientes. Para isso, a proposta é fazer uma aplicação onde o usuário possa cadastrar um novo cliente, bem como editar, remover e consultar os cadastros realizados anteriormente e que se encontram na base de dados
 
-### `npm start`
+## Como instalar
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Copie a chave ssh do projeto:
+~~~
+git@github.com:felipedias1/crud-web.git
+~~~
+Abra um terminal no seu computador e utilize os comandos a baixo na ordem que são apresentados:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+~~~
+git clone git@github.com:felipedias1/crud-web.git
+cd crud-web
+npm install
+~~~
 
-### `npm test`
+A aplicação está utilizando um banco de dados simulado através do JsonServer, então para executar o backend, você executará o seguinte comando:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+~~~
+json-server --watch db.json
+~~~
 
-### `npm run build`
+Agora que está tudo funcionando, é só rodar esse comando:
+~~~
+npm start
+~~~
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Modo de desenvolvimento
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Este projeto foi desenvolvido com foco em FrontEnd, utilizando o software "JSONServer" para realizar as requisições.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tecnologias
 
-### `npm run eject`
+- React
+- JavaScript
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Como utilizar?
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- / - rota para a pagina de consulta dos clientes
+- /customer - rota para cadastrar ou editar cliente
+ 
+## Qual o próximo passo?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Desenvolver testes unitários e de integração
+* Implementar Cadastro de Profissionais da Empresa.
+* Implementação de consumo de API's externas
+* Desenvolver o BackEnd da aplicação.
